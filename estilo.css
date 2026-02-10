@@ -21,6 +21,21 @@
     /* Faz o fundo "vibrar" suavemente */
     background-size: 150% 150%;
     animation: lensEffect 20s ease infinite;
+}body {
+    display: flex;
+    flex-direction: column; /* Isso faz um ficar embaixo do outro */
+    align-items: center;    /* Centraliza os dois na tela */
+    gap: 20px;             /* Cria um espaço entre o cartão e a seção */
+}body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    min-height: 100vh;           /* Altura mínima da tela, mas permite crescer */
+    height: auto;                /* ESSENCIAL: diz que a altura pode ser maior que a tela */
+    overflow-y: auto;            /* ESSENCIAL: ativa a rolagem vertical se precisar */
+    padding: 40px 0;             /* Dá um espaço no topo e no fim para não ficar colado */
+    gap: 30px;                   /* Espaço entre o cartão e o "Sobre Mim" */
 }
 
 /* Animação para as nuvens de cor se moverem devagar */
@@ -148,4 +163,85 @@ p {
     flex-direction: column;
     align-items: center; /* Isso centraliza tudo (foto, textos e botão) na vertical */
     text-align: center;
+}.botao-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* Gradiente oficial do Instagram */
+    background-color: rgba(255, 255, 255, 0.2); /* Branco bem transparente */
+    color: #675f5f;                               /* Texto branco para contraste */
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borda fina e suave */
+    border-radius: 12px;                        /* Pontas levemente arredondadas */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);                /* O efeito de vidro fosco no botão */
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra bem
+}
+
+.botao-instagram:hover {
+    transform: scale(1.05); /* Ele cresce um pouquinho ao passar o rato */
+}.secao-info {
+    background: rgba(255, 255, 255, 0.1); /* Efeito de vidro */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    color: white; /* Texto branco para destacar */
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}.secao-info {
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco bem transparente */
+    backdrop-filter:blur(10px);          /* O segredo do efeito de vidro fosco */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordinha fina para dar profundidade */
+    padding: 30px;
+    border-radius: 20px;
+    color: rgb(136, 96, 96);
+    max-width: 450px;       /* Mantém a largura elegante */
+    width: 90%;             /* Garante que fique bom no celular */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra para "levantar" da tela */
+    margin-bottom: 50px;    /* Espaço final para não colar no rodapé */
+}
+
+.secao-info h2 {
+    color: #432d25;         /* Uma cor quente para combinar com o Instagram */
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(230, 104, 60, 0.3); /* Linha sutil embaixo do título */
+    display: inline-block;
+}
+
+.secao-info ul {
+    list-style: none;       /* Tira aquelas bolinhas padrão */
+    padding: 0;
+}
+
+.secao-info li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Adicionando um "check" antes de cada habilidade */
+.secao-info li::before {
+    content: "🚀";          /* Um emoji para dar personalidade */
+}/* Criando a animação de subir e aparecer */
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando a animação no Cartão e na Seção */
+.cartao-principal, .secao-info {
+    animation: subir 1s ease-out; /* Dura 1 segundo com saída suave */
 }
