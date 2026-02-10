@@ -1,0 +1,151 @@
+/* Isso aqui muda o fundo do site */
+ body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; /* Evita barras de rolagem estranhas */
+
+    /* Aqui criamos as "nuvens" de cor suave */
+    background-color: #ffffff; /* Fundo base branco */
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, rgb(158, 42, 82) 0, transparent 50%), 
+        radial-gradient(at 0% 100%, hsla(197,37%,24%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 100%, hsla(350,100%,70%,0.2) 0, transparent 50%), 
+        radial-gradient(at 100% 100%, hsla(190, 98%, 53%, 0.2) 0, transparent 50%);
+    
+    /* Faz o fundo "vibrar" suavemente */
+    background-size: 150% 150%;
+    animation: lensEffect 20s ease infinite;
+}
+
+/* Animação para as nuvens de cor se moverem devagar */
+@keyframes lensEffect {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Aqui é onde a mágica do movimento acontece */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/* Isso aqui muda a cor e o tamanho do título */
+h1 {
+    color: #2d3436;           /* Um cinza quase preto, elegante */
+    border-bottom: 2px solid #0984e3; /* Uma linha azul embaixo do nome */
+    padding-bottom: 10px;
+}
+h3 {
+    color: #4b4b4b; /* Um cinza elegante */
+    margin-top: -10px; /* Truque para ele ficar mais pertinho do seu nome */
+}
+
+/* Isso aqui muda o parágrafo */
+p {
+    color: #636e72;
+    font-size: 1.2rem;
+}
+/* Estilizando a Foto */
+.foto-perfil {
+    width: 150px;           /* Largura */
+    height: 150px;          /* Altura */
+    border-radius: 50%;     /* Deixa a foto redondinha! */
+    border: 4px solid #fff; /* Uma borda branca */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+/* Estilizando o Botão */
+.botao-contato {
+    background-color: #0984e3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;        /* Faz aparecer a mãozinha de clique */
+    font-weight: bold;
+    transition: 0.3s;       /* Faz a cor mudar suavemente */
+}
+
+.botao-contato:hover {
+    background-color: #74b9ff; /* Cor muda quando passa o mouse */
+}
+/* Estilizando o Botão */
+.botao-contato {
+    background-color: rgba(255, 255, 255, 0.2); /* Branco bem transparente */
+    color: #675f5f;                               /* Texto branco para contraste */
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borda fina e suave */
+    border-radius: 12px;                        /* Pontas levemente arredondadas */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);                /* O efeito de vidro fosco no botão */
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra bem leve */
+}
+
+/* Efeito ao passar o mouse */
+.botao-contato:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Fica um pouco mais visível */
+    transform: translateY(-3px);                /* Ele sobe levemente */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao passar o mouse */
+.botao-contato:hover {
+    background-color: #74b9ff; /* Fica um azul mais claro */
+    transform: scale(1.05);    /* Dá um leve "pulo" para frente */
+}
+.cartao-principal {
+    background-color: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px; /* Para não ficar largo demais no PC */
+}.cartao-principal {
+     /* Ajustes de tamanho */
+    width: 90%;           /* No celular, ele ocupa 90% da largura */
+    max-width: 450px;     /* No computador, ele não passa de 450px */
+    
+    /* Margem para não colar no topo da tela em celulares pequenos */
+    margin: 20px auto; 
+}.cartao-principal {
+    background-color: rgba(255, 255, 255, 0.8); /* O 0.8 deixa o fundo passar um pouquinho */
+    backdrop-filter: blur(10px); /* Esse comando cria o efeito de "vidro jateado" */
+    /* ... mantenha o restante do código do cartão ... */
+}.foto-perfil {
+    width: 150px;       /* Ou o tamanho que você já definiu */
+    height: 150px;      /* Para garantir que fique um círculo perfeito */
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover;  /* Não deixa a foto esticar/achatar */
+    
+    /* AS LINHAS QUE CENTRALIZAM: */
+    display: block;     /* Transforma a imagem em um bloco */
+    margin: 20px auto;  /* 'auto' centraliza na horizontal e '20px' dá espaço em cima/baixo */
+}.cartao-principal {
+    /* ... suas outras configurações ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Isso centraliza tudo (foto, textos e botão) na vertical */
+    text-align: center;
+}
